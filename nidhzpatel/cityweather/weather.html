@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Report</title>
+  </head>
+  <body>
+    {% if weather_info %}
+      <h1>Weather Report for {{ weather_info.city }}, {{ weather_info.country }}</h1>
+      <p>{{ weather_info.description }}</p>
+      <p>Temperature: {{ weather_info.temperature }}&deg;C</p>
+      <p>Humidity: {{ weather_info.humidity }}%</p>
+      <p>Wind Speed: {{ weather_info.wind_speed }} km/h</p>
+    {% else %}
+      <h1>City not found. Please try again.</h1>
+    {% endif %}
+  </body>
+</html>
